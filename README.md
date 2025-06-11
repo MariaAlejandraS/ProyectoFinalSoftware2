@@ -1,11 +1,17 @@
 # SoftwareFinal
-**Sistema de Estadísticas para Proyectos Académicos
-Este proyecto forma parte del curso Software 2 y consiste en la implementación de un microservicio independiente que permite visualizar estadísticas de proyectos académicos (postulados, aprobados, rechazados, terminados) mediante gráficos de barras y pastel. La solución aplica principios modernos de diseño y arquitectura de software orientados a la industria.
+**SISTEMA ACADEMICO
+Se ha desarrollado un proyecto práctico enfocado en la aplicación de conocimientos sobre arquitectura de software moderna, con énfasis en el uso de microservicios, arquitectura hexagonal (puertos y adaptadores) y la filosofía de Domain-Driven Design (DDD). Además, se integraron diversos patrones de diseño, mecanismos de seguridad con JWT, y se aplicaron buenas prácticas de contenedorización con Docker, todo con el objetivo de construir un sistema escalable, mantenible y profesionalmente robusto.
 
-**Requisito Funcional Principal
-YO COMO coordinador NECESITO visualizar gráficas estadísticas en barras y pastel sobre cantidad de proyectos postulados, aprobados, rechazados y terminados en un período académico PARA tener un control estadístico.
+**REQUISITOS
+1.Yo como empresa necesito registrarme en el sistema para posteriormente subir proyectos de software que serán realizados por estudiantes en alguna modalidad de pasantía, proyecto de curso o práctica profesional. Contexto: para registrarse se debe pedir: *Nit de la empresa, *nombre, *email, *sector, *teléfono de contacto, *nombres del contacto, *apellidos del contacto y *cargo del contacto. (*: Datos obligatorios).
+2.Yo como empresa necesito subir mi proyecto de software para que pueda ser implementado por estudiantes en alguna modalidad de pasantía, proyecto de curso o práctica profesional. Contexto: Los datos del proyecto serán: *nombre, *resumen, *objetivos, *descripción, *tiempo máximo en meses, presupuesto y *fecha. Por defecto, el estado inicial será recibido.
+3.Yo como coordinador necesito listar los proyectos que han postulado las empresas en un periodo académico para emitir una evaluación y cambiar el estado del proyecto. Contexto: el listado debe mostrar los datos básicos de la empresa y los datos básicos del proyecto; al darle clic en el botón “Ver detalles” mostrará todos los datos de la empresa, del proyecto y su estado actual. Se puede cambiar el estado a: Recibido, aceptado, rechazado. El coordinador puede colocar comentarios. Una vez cambiado el estado, el sistema enviará un correo electrónico a la empresa notificando el cambio de estado.
+4.Yo como estudiante necesito ver el listado de proyectos que las empresas han postulado para contactarme con el coordinador y manifestar mi interés en uno de ellos (se presta para enviar mensajes asíncronos). Contexto: el listado tiene que manejar como columnas: No, fecha, nombre empresa, nombre del proyecto, resumen. Al darle clic debe permitir mostrar todos los datos de la empresa y el proyecto. Aquí se puede aplicar el patrón Observer mediante varias vistas que muestren los datos de los proyectos. Proponer esas vistas, por ejemplo, una vista podria mostrar gráficamente el numero de proyectos presentados.
+5.Yo como usuario del sistema (empresa, coordinador, estudiante) necesito iniciar sesión en el sistema para consultar las novedades de los proyectos.
+6.Yo como coordinador necesito visualizar gráficas estadísticas en barras y pastel sobre cantidad de proyectos postulados, aprobados, rechazados y terminados en un período académico para tener un control estadístico.
 
-**Tecnologías Utilizadas
+
+**TECNOLOGIAS USADAS
 Backend: 
 1. Java 17
 2. Spring Boot 3.x
@@ -28,7 +34,7 @@ Otros:
 4. MapStruct (mapeo de DTOs)
 5. ModelMapper / JPA
 
-**Arquitectura del Proyecto
+**ARQUITECTURA DEL PROYECTO
 Este sistema adopta la arquitectura hexagonal (puertos y adaptadores) con orientación a Domain-Driven Design (DDD), separando claramente la lógica del dominio de los detalles de infraestructura y frameworks.
 
 Componentes clave:
@@ -50,7 +56,7 @@ Infraestructura: Configuración de seguridad, autenticación JWT, Docker, etc.
 5. Proxy
 6. Facade
 
-**Seguridad
+**SEGURIDAD
 El sistema implementa autenticación y autorización basada en JWT, con dos esquemas disponibles:
 1. Manual: Generación y validación de tokens directamente desde el backend.
 2. Integración con Keycloak: Gestión externa de identidad. Spring Boot valida los tokens emitidos.
@@ -75,11 +81,11 @@ CorteTres/
     └── docs/
     └── arquitectura.pdf      # Documento final con la arquitectura del sistema
     
-**documentación Técnica
+**DOCUMENTACION TECNICA
 La documentación detallada de la arquitectura, decisiones de diseño, diagrama de despliegue, modelos de dominio y flujos de autenticación se encuentra a continuación:
 https://docs.google.com/document/d/1fAb68_fE2BmldnjrMkHxUDUPMghQMMlG/edit
 
-**Créditos
+**CREDITOS
 Desarrollado por estudiantes del curso Ingeniería de Software 2
 Universidad del Cauca - Departamento de Ingeniería de Sistemas
 Semestre 2025-I
