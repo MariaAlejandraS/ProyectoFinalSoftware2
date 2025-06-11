@@ -35,7 +35,7 @@ function RegistrarEmpresa() {
         password: empresa.password
       };
 
-      await axios.post('http://localhost:8081/a/company', payload); // Ajusta URL si es necesario
+      await axios.post('http://localhost:8081/a/company', payload);
       alert('Empresa registrada con éxito');
     } catch (error) {
       console.error(error);
