@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ProyectoServiceApplication",
+            "request": "launch",
+            "mainClass": "co.edu.unicauca.proyecto_service.ProyectoServiceApplication",
+            "projectName": "proyecto-service"
+        },
+        {
+            "type": "java",
+            "name": "GatewayServiceApplication",
+            "request": "launch",
+            "mainClass": "com.tuapp.gateway_service.GatewayServiceApplication",
+            "projectName": "gateway-service"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EmpresaServiceApplication<empresa-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "co.edu.unicauca.empresa_service.EmpresaServiceApplication",
+            "projectName": "empresa-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
